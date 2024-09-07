@@ -67,7 +67,7 @@ public class ProductController {
         }
     }
 
-    @DeleteMapping("/product/{productId/delete")
+    @DeleteMapping("/product/{productId}/delete")
     public ResponseEntity<ApiResponse> deleteProduct(@PathVariable Long productId) {
         try {
             productService.deleteProductById(productId);
@@ -91,7 +91,7 @@ public class ProductController {
     }
 
     @GetMapping("/products/by/category-and-brand")
-    public ResponseEntity<ApiResponse> getProductByCategoryAndBrand(@RequestParam String category, @RequestParam String brand) {
+    public ResponseEntity<ApiResponse> getProductByCategoryAndBrand(@RequestParam Category category, @RequestParam String brand) {
         try {
             List<Product> products = productService.getProductsByCategoryAndBrand(category, brand);
             if (products.isEmpty()){

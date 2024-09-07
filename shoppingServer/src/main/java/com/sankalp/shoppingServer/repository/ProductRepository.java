@@ -1,5 +1,6 @@
 package com.sankalp.shoppingServer.repository;
 
+import com.sankalp.shoppingServer.model.Category;
 import com.sankalp.shoppingServer.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -10,7 +11,7 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     List<Product> findByBrand(String brand);
 
-    List<Product> findByCategoryAndBrand(String category, String brand);
+    List<Product> findByCategoryAndBrand(Category category, String brand);
 
     List<Product> findByName(String name);
 

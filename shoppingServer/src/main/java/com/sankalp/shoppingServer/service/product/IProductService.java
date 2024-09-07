@@ -1,5 +1,6 @@
 package com.sankalp.shoppingServer.service.product;
 
+import com.sankalp.shoppingServer.model.Category;
 import com.sankalp.shoppingServer.model.Product;
 import com.sankalp.shoppingServer.requests.AddProductRequest;
 import com.sankalp.shoppingServer.requests.UpdateProductRequest;
@@ -14,7 +15,7 @@ public interface IProductService {
     List<Product> getAllProducts();
     List<Product> getProductsByCategory(String category);
     List<Product> getProductsByBrand(String brand);
-    List<Product> getProductsByCategoryAndBrand(String category, String brand);
+    List<Product> getProductsByCategoryAndBrand(Category category, String brand);
     List<Product> getProductsByName(String name);
     List<Product> getProductsByBrandAndName(String brand, String name);
     public Long countProductsByBrandAndName(String brand, String name);
